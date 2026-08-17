@@ -1,8 +1,8 @@
 # gongkaoleida-skill
 
-一个用于扫描、核验和筛选广西公考及广义招聘公告的 Codex Skill，供团队内部共享源码和协作维护。
+一个用于扫描、核验和筛选广西公考及广义招聘公告的 Codex Skill，供公开安装、使用和协作维护。
 
-本仓库直接镜像当前生产使用版本，完整保留客户名称、运营者标注、本地项目路径、评分演进记录和业务沉淀规则，不做公开发布所需的脱敏或通用化改写。
+本仓库直接镜像当前生产使用版本。按维护者要求，完整保留客户名称、运营者标注、本地项目路径、评分演进记录和业务沉淀规则，不做脱敏或通用化改写。
 
 它把“找公告—核验原文—判断是否值得做内容—整理交付表”串成一套可审计流程，默认覆盖公考雷达、广西人事考试网、14 个设区市人社/政府招聘入口和广西人才网地市站。
 
@@ -20,17 +20,17 @@
 
 ### 推荐：让 Codex 自动安装
 
-先确认自己的 GitHub 账号已经获得本私有仓库的访问权限，并在本机完成 GitHub 登录。然后在 Codex 中发送：
+在 Codex 中发送下面这句话即可：
 
 ```text
-使用 $skill-installer，从私有仓库 dahua3885-cmyk/gongkaoleida-skill 的 gongkaoleida 路径安装 Skill。
+使用 $skill-installer，从 GitHub 仓库 dahua3885-cmyk/gongkaoleida-skill 的 gongkaoleida 路径安装 Skill。
 ```
 
 Codex 会把 Skill 安装到 `$CODEX_HOME/skills/gongkaoleida`；下一轮对话即可使用。
 
 ### 手动安装
 
-克隆私有仓库：
+克隆公开仓库：
 
 ```bash
 git clone https://github.com/dahua3885-cmyk/gongkaoleida-skill.git
@@ -42,7 +42,7 @@ git clone https://github.com/dahua3885-cmyk/gongkaoleida-skill.git
 ~/.codex/skills/gongkaoleida
 ```
 
-重新启动 Codex 或刷新 Skills 后使用。如果仓库无法打开或克隆，先让仓库管理员把你的 GitHub 账号加入 Collaborators 或所属团队。
+重新启动 Codex 或刷新 Skills 后使用。
 
 ## 使用示例
 
@@ -79,11 +79,11 @@ gongkaoleida/
     └── validate_delivery.ps1
 ```
 
-## 内部共享说明
+## 完整版本说明
 
-- 仓库包含内部项目名称、人员标注和本机绝对路径，只能放入受控的私有仓库。
-- 安装目录中的 `gongkaoleida` 应与当前生产 Skill 保持完整镜像，修改前先核对是否会丢失业务规则。
-- 如将来需要向互联网公开发布，应另建公开发行分支并重新完成隐私、凭据、版权和路径审计。
+- 仓库有意保留原始项目名称、人员标注、本机绝对路径和业务规则，以保持生产版本的完整度。
+- 其他使用者机器上的目录结构可能不同，涉及绝对路径的本地沉淀位置需要按自己的环境调整。
+- 安装目录中的 `gongkaoleida` 与发布时的生产 Skill 保持完整镜像，修改前应核对是否会丢失业务规则。
 
 ## 数据与合规边界
 
@@ -93,6 +93,6 @@ gongkaoleida/
 - 使用者应遵守目标网站的服务条款、robots 规则及适用法律。
 - 评分用于内容运营排序，不代表岗位客观价值，也不构成报考建议。
 
-## 使用许可
+## License
 
-仅限授权团队内部使用，详见 [LICENSE](LICENSE)。
+[MIT](LICENSE)
